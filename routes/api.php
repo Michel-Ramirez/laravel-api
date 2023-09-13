@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 
 //rotte per le API automaticamente
 
-Route::apiResource('project', ProjectController::class);
+Route::apiResource('projects', ProjectController::class);
