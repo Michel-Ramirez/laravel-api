@@ -35,7 +35,12 @@ class ProjectController extends Controller
      */
     public function show(string $id)
     {
-        //
+        //prendo il post con usando find($id) in modo che se non c'è posso fare il controllo e mandare null con 404.
+        $project = Project::with('type', 'technologies')->find($id);
+
+        //condizione nel caso non ci sia il post, non risponde nulla
+        if (!$project) return response(null, 404);
+        return response()->json($project);
     }
 
     /**
