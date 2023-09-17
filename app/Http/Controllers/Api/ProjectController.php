@@ -13,7 +13,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::limit(10)
+        $projects = Project::limit(3)
             //nomi della relazione(non della identità)
             ->with('type', 'technologies')
             ->orderBy('created_at', 'DESC')
