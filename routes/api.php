@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,3 +20,6 @@ use Illuminate\Support\Facades\Route;
 //rotte per le API automaticamente
 
 Route::apiResource('projects', ProjectController::class);
+
+//Rotta per ricevere messaggi
+Route::post('/contact-message', [ContactController::class, 'message']);
