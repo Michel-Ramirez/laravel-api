@@ -23,7 +23,7 @@ return [
 
     'allowed_origins_patterns' => [],
 
-    'allowed_headers' => [env('APP_FRONT_END_URL'), 'http://127.0.0.1:5174'],
+    'allowed_headers' => ['*'],
 
     'exposed_headers' => [],
 
